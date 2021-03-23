@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src = "/scripts/jquery.min.js"></script>
+    <script src = "bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+
+
+
+</head>
+<body>
+
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="#">Persol Lunch DB</a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                        
+                         
+                        </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#"><span class="glyphicon glyphicon-send"></span> Feedback</a></li>
+                      <li><a href="orders.html"><span class="glyphicon glyphicon-shopping-cart"></span>All Orders</a></li>
+                      <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+
+
+<div id="table_canvas" style = "overflow-y:scroll;"> 
+
+  <table id = 'orders' class = 'table table-striped'>
+    <tr style = 'background:#f7f7f7'>
+      <th>ID</th>
+      <th>Sender</th>
+      <th>Message</th>
+      <!-- <th>Action</th> -->
+    </tr>
+
+    <tbody id="feedback_body">
+      <!-- JS code generated the content of the body -->
+    </tbody>
+
+   </table>
+
+  </div>
+	
+
+</div>
+
+<div id ='footprint' style = "height:45px; background-color: #202020; padding-top:5px; padding-bottom: 5px;">
+  
+  <button style = "float:right; margin-right:10px" type="button" class="btn btn-success" onclick="printPage()">Print Data</button>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCaad0Bqhh5ldxsX_FWZdZm6z2itO-CNKc",
+    authDomain: "plunch-1ad1e.firebaseapp.com",
+    databaseURL: "https://plunch-1ad1e.firebaseio.com",
+    projectId: "plunch-1ad1e",
+    storageBucket: "plunch-1ad1e.appspot.com",
+    messagingSenderId: "578168197632"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src = "jquery.js"></script>
+<script src = "firebase_db.js"></script>
+
+</body>
+</html>

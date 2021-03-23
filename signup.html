@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Persol Lunch App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLM</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"> 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- App Name -->
+    <meta name="apple-mobile-web-app-title" content="Persol Lunch App">
+    <meta name="application-name" content="Persol Lunch">
+
+    <!-- App Capable -->
+    <meta name="apple-mobile-web-app-capable" content="Persol Lunch">
+    <meta name="apple-web-app-capable" content="Persol Lunch">
+
+    <link rel="apple-touch-icon" sizes = "72x72" href="images/icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes = "96x96" href="images/icons/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes = "128x128" href="images/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes = "144x144" href="images/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes = "152x152" href="images/icons/icon-152x152.png">
+
+    <!-- Desktop Browsers -->
+    <link rel="icon" href="images/icons/icon-192x192.png" type="image/ico">
+    <link rel="icon" href="images/icons/icon-384x384.png" type="image/ico">
+    <link rel="icon" href="images/icons/icon-512x512.png" type="image/ico">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    
+    <!-- Windows 8/10 -->
+    <meta name="msapplication-TileColor" content="#c8232c">
+    <meta name="msapplication-TileImage" content="/images/icon-144x144.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
+
+  
+</head>
+  <style>
+      .no-js #loader { display: none;  }
+      .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+      .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(images/loader-128x/Preloader_3.gif) center no-repeat #fff;
+      }
+  </style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+<body style="overflow:auto">
+
+    <div class="se-pre-con"></div>
+
+
+
+  <div>
+    <div class="imgcontainer">
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+     
+        <i class="material-icons prefix"> account_circle</i> 
+        <div class="input-field col s12">
+           
+        <input  id="email_field" type="email" class="validate" placeholder="Persol Email">
+               
+        </div>
+        
+        <i class="material-icons prefix">https</i>
+        <div class="input-field col s12">
+          
+          <input   id="password_field" type="password" class="validate" placeholder="Password"/>
+            
+        </div>
+      
+   
+      <button type="submit" onclick="signup()">Signup</button><br><br>
+      <button style = "background-color:#33FF8B"  onclick="signin()" type="submit">Login</button>
+    </div>
+
+    
+  </div>
+</div>
+
+
+<!-- <div class="footer">@Copyright Persol Systems Limited</div> -->
+  
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/materialize.min.js"></script>
+  <!-- <script type="text/javascript" src="scripts/materialize.js"></script> -->
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+     document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+        $('.sidenav').sidenav();
+  });
+
+      
+  </script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCaad0Bqhh5ldxsX_FWZdZm6z2itO-CNKc",
+    authDomain: "plunch-1ad1e.firebaseapp.com",
+    databaseURL: "https://plunch-1ad1e.firebaseio.com",
+    projectId: "plunch-1ad1e",
+    storageBucket: "plunch-1ad1e.appspot.com",
+    messagingSenderId: "578168197632"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src = "scripts/signup.js"></script>
+<script src = "scripts/loader.js"></script>
+
+</body>
+</html>

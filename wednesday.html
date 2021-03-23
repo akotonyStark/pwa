@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="Persol Lunch App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLM</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/inline.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Persol Lunch App">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  </head>
+<style>
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    .se-pre-con {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url(images/loader-64x/Preloader_3.gif) center no-repeat #fff;
+    }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+<body style="overflow:auto">
+
+    <div class="se-pre-con"></div>
+
+
+
+<nav class="extended">
+    <div class="nav-wrapper" style="background:#c8232c">
+      <a href="#" class="brand-logo">Persol Lunch</a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<script>
+   var myEmail = sessionStorage.getItem('user');
+    var displayName = myEmail.charAt(0).toUpperCase()+myEmail.substring(1, myEmail.indexOf('.'));
+   // var food = document.getElementById('jchicken').value;
+    //var food = "Some kinda food";
+ </script>
+
+<script>
+  
+  
+  function sendOrder1(){
+    var food = document.getElementById('yamc').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+}
+
+  function sendOrder2(){
+   var food = document.getElementById('yamf').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+
+  function sendOrder3(){
+    var food = document.getElementById('plantc').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+
+  function sendOrder4(){
+    var food = document.getElementById('plantf').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+
+  function sendOrder5(){
+    var food = document.getElementById('cricec').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+  
+  function sendOrder6(){
+    var food = document.getElementById('cricef').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+
+  function sendOrder7(){
+    var food = document.getElementById('kenkey').value;
+    window.alert(displayName+", you have placed an order for "+food);
+    var timestamp = new Date().getDate();
+        var day = sessionStorage.getItem('wday');
+
+          var randomId = "Wed-"+timestamp + "-" +Math.floor(Math.random() * 10000 -  1)+ 1;
+          firebase.database().ref('Orders/' + randomId).set({
+                Name: displayName,
+                Food: food,
+                Day: day
+              });
+  }
+
+  
+  
+  
+  </script>
+ 
+   <ul id="slide-out" class="sidenav">
+     <li><div class="user-view">
+       <div class="background">
+         <img src="images/tabletop.jpg">
+       </div>
+       
+       <a href="#user"><img class="circle" src="images/pic.png"></a>
+       <a href="#name"><span class="white-text name"><script>document.write(displayName);</script></span></a>
+       <a href="#email" id="emailDisplay"><span class="white-text email"><script>document.write(myEmail);</script></span></a>
+     </div></li>
+     <li><a href="monday.html"><i class="material-icons">cloud</i>Monday</a></li>
+     <li><a href="tuesday.html"><i class="material-icons">cloud</i>Tuesday</a></li>
+     <li><a href="wednesday.html"><i class="material-icons">cloud</i>Wednesday</a></li>
+     <li><a href="thursday.html"><i class="material-icons">cloud</i>Thursday</a></li>
+     <li><a href="friday.html"><i class="material-icons">cloud</i>Friday</a></li>
+ 
+     <li><div class="divider"></div></li>
+     <!-- <i class="material-icons prefix">account_circle</i> -->
+     <li><a class="waves-effect " onclick="logout()"><i class="material-icons prefix">lock_open</i>Logout</a></li>
+   </ul>
+ 
+
+
+
+<div id = "menu_items" style="margin:0 auto;">
+
+ 
+  <!-- Modal Structure -->
+  <div id="modal1"  class="modal bottom-sheet">
+      <div class="modal-content" >
+        <h4 style ="color:#f44336">Boiled Yam with Garden Egg Stew and Egg + Chicken</h4>
+        <p>You have the alternative of replacing chicken with fish</p>
+      </div>
+      <div class="modal-footer">
+        <input type = "hidden"/>
+          <button href="#!"   id="yamc" value="Boiled Yam with Garden Egg Stew and Egg + Chicken" class="modal-close waves-effect waves-green btn-flat"  onclick="sendOrder1()">Order</button>
+          <button href="#!"   id="yamf" value="Boiled Yam with Garden Egg Stew and Egg + Fish" class="modal-close waves-effect waves-green btn-flat"  onclick="sendOrder2()">I want Fish</button>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+
+    
+   
+
+      <!-- Modal Structure -->
+  <div id="modal3" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4 style ="color:#f44336">Curry Rice	&amp; Chicken	&amp; Salad</h4>
+        <p>You have the alternative of replacing chicken with fish</p>
+      </div>
+      <div class="modal-footer">
+          
+        <button href="#!" id = "cricec" value = "Curry Rice and Chicken" class="modal-close waves-effect waves-green btn-flat" onclick="sendOrder5()">Order</button>
+        <button href="#!" id = "cricef" value = "Curry Rice and Fish" class="modal-close waves-effect waves-green btn-flat" onclick="sendOrder6()">I want Fish</button>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+
+          <!-- Modal Structure -->
+  <div id="modal2" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4 style ="color:#f44336">Ripe Plantain	with Garden Egg Stew and Egg + Chicken</h4>
+        <p>You have the alternative of replacing chicken with fish</p>
+      </div>
+      <div class="modal-footer">
+          
+        <button href="#!" id = "plantc" value = "Ripe Plantain and Chicken" class="modal-close waves-effect waves-green btn-flat" onclick="sendOrder3()">Order</button>
+        <button href="#!" id = "plantf" value = "Ripe Plantain and Fish" class="modal-close waves-effect waves-green btn-flat" onclick="sendOrder4()">I want Fish</button>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+
+          <!-- Modal Structure -->
+  <div id="modal4" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4 style ="color:#f44336">Kenkey with Pepper, Shito	&amp; Fish</h4>
+        <p>There is no replacement available for Fish</p>
+      </div>
+      <div class="modal-footer">
+          
+        <button href="#!" id = "kenkey" value = "Kenkey with Pepper, Shito with Fish" class="modal-close waves-effect waves-green btn-flat" onclick="sendOrder7()">Order</button>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+
+     
+
+
+        <!-- Feedback Modal -->
+  <div id="modalx" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4 style ="color:#f44336">Feedback</h4>
+        <p> <div class="row">
+            <div class="input-field col s12">
+              <textarea id="feedback" class="materialize-textarea" data-length="120"></textarea>
+              <label for="textarea2">Write your message...</label>
+            </div>
+          </div></p>
+      </div>
+      <div class="modal-footer">
+          <button onclick="sendFeedback(displayName,document.getElementById('feedback').value)" class="modal-close waves-effect waves-green btn-flat">Submit</button>
+        
+      </div>
+    </div>
+
+    
+            
+
+  <table>
+
+          <tr>
+            <td>
+              <div class="card" style="height:165px; width:165px">
+                <div class="card-image waves-effect waves-block waves-light modal-trigger">
+                  <img class="activator modal-trigger"  data-target="modal1" src="images/yam_kont.jpg">
+                </div>
+              </div>
+            </td>
+            <td> 
+              <div class="card" style="height:165px; width:165px">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator modal-trigger" data-target="modal2"  src="images/plantain_stew.jpg">
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="card" style="height:165px; width:165px">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator modal-trigger" data-target="modal3"  src="images/curry.jpg">
+                </div>
+              </div>
+            </td>
+            <td> 
+              <div class="card" style="height:165px; width:165px">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator modal-trigger" data-target="modal4"  src="images/kenkey.JPG">
+                </div>
+              </div>
+            </td>
+          </tr>
+             
+     
+      </table>
+
+</div>
+
+
+    <div id = "special_request"  style="right: 0; bottom: 0; position: absolute; margin:7px">
+      <a  data-target="modalx" class="btn-floating btn-large red pulse btn modal-trigger"><i class="material-icons">edit</i></a>
+    </div>
+
+    </div>
+
+
+ 
+ 
+
+
+  
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/materialize.min.js"></script>
+  <script type="text/javascript" src="scripts/materialize.js"></script>
+  <script src = "app.js"></script>
+  <script src = "scripts/loader.js"></script>
+  
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+     document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+        $('.sidenav').sidenav();
+       
+  });
+
+  </script>
+
+
+<script>
+  $(document).ready(function(){
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+    $('.modal').modal();
+  });
+</script>
+  
+  
+      
+ <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyCaad0Bqhh5ldxsX_FWZdZm6z2itO-CNKc",
+     authDomain: "plunch-1ad1e.firebaseapp.com",
+     databaseURL: "https://plunch-1ad1e.firebaseio.com",
+     projectId: "plunch-1ad1e",
+     storageBucket: "plunch-1ad1e.appspot.com",
+     messagingSenderId: "578168197632"
+   };
+   firebase.initializeApp(config);
+   // Get a reference to the database service
+  var database = firebase.database();
+ </script>
+
+<script>
+    function logout(){
+    firebase.auth().signOut();
+    window.location.href = "index.html" ;
+  }
+  </script>
+  
+  <script src = "scripts/feedback.js"></script>
+ 
+ 
+
+</body>
+</html>
